@@ -49,4 +49,13 @@ sources:
       - name: salespersonquotahistory
         description: sales person quota history.
       - name: stateprovince
-        description: states 
+        description: states.
+      - name: address
+        description: addres of city.
+      - name: employee
+        decription: details from employees.
+      - name: person
+        decription: details from persons.
+      - name: countryregion
+        description: country regions. 
+
