@@ -35,6 +35,7 @@ models:
   adventureworks:
     marts:
       +materialized: table
+      +schema: fct_and_dim_tables
     staging:
       +materialized: table
       +schema: stg_tables
