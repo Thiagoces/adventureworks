@@ -9,6 +9,7 @@ with employee as (
       , sickleavehours as sick_leave_hours
       , hiredate as hire_date
       , birthdate as bith_date
+      , currentflag as inactive_or_active	
     
     from {{source ('adventureworks', 'employee') }}
 
