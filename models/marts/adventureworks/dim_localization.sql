@@ -22,9 +22,10 @@ localization as (
     select
       country.country_region_code
      , country.country_name 
+     , state.name as state_name
      , city.city
      , state.state_province_id
-     , state territory_id
+     , state.territory_id
 
     from country
     left join state on state.country_region_code = country.country_region_code
