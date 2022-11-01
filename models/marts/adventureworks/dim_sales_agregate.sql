@@ -29,7 +29,7 @@ creditcard as (
 sales_agregate as (
     
     select 
-        sales_order_header_sales_reason.sales_order_id
+        order_header.sales_order_id
         , order_header.customer_id
         , order_header.territory_id
         , order_header.creditcard_id
