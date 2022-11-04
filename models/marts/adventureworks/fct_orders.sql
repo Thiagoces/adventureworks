@@ -1,4 +1,4 @@
-with 
+ with 
 sales_agregate as (
     select 
     *
@@ -26,6 +26,7 @@ customer as (
 joined as (
     select
           sales_agregate.sales_order_id
+        , sales_agregate.ship_to_address_id
         , sales_agregate.customer_id
         , sales_agregate.territory_id
         , sales_agregate.creditcard_id
@@ -49,7 +50,7 @@ joined as (
     left join product 
     on product.sales_order_id = sales_agregate.sales_order_id
     left join localization
-    on localization.territory_id = sales_agregate.territory_id
+    on localization.address_id = sales_agregate.ship_to_address_id
     left join customer
     on customer.customer_id = sales_agregate.customer_id
 

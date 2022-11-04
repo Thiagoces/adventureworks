@@ -26,10 +26,13 @@ localization as (
      , city.city
      , state.state_province_id
      , state.territory_id
+     , city.address_id
 
     from country
-    left join state on state.country_region_code = country.country_region_code
-    left join city on city.state_province_id = state.state_province_id
+    left join state 
+    on state.country_region_code = country.country_region_code
+    left join city 
+    on city.state_province_id = state.state_province_id
 )
 
 select * from localization
