@@ -69,16 +69,3 @@ sales_agregate as (
 
 select * from sales_agregate
 
--- with
--- first_step as (
---   select
---     sh.salesorderid
---    , sr.salesreasonid
---    , sh.orderdate
---    , (row_number () over (partition by sh.salesorderid order by sh.orderdate)) as d
---   from `adventureworksdw.sales_salesorderheader` as sh
---  left join adventureworksdw.sales_salesorderheadersalesreason as sr on sh.salesorderid = sr.salesorderid
--- )
-
--- select salesorderid, d, salesreasonid from first_step
--- where d = 1
